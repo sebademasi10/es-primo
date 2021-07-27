@@ -1,0 +1,7 @@
+<hello name="{{ name }}"></hello>
+<form (submit)="esPrimo(+number.value)">
+  <p>Ingrese el número: </p>
+  <input type="number" style="margin-right: 10px;" #number>
+  <button (click)="esPrimo(+number.value)">Calcular</button>
+</form>
+<h4>{{nEsPrimo ? 'Es primo': 'No es primo'}}</h4>
