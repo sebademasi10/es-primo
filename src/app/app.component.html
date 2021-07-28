@@ -1,7 +1,13 @@
-<hello name="{{ name }}"></hello>
+
+<h1>Determinar si un número es primo</h1>
 <form (submit)="esPrimo(+number.value)">
-  <p>Ingrese el número: </p>
-  <input type="number" style="margin-right: 10px;" #number>
-  <button (click)="esPrimo(+number.value)">Calcular</button>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el número: </mat-label>
+    <input matInput type="number" style="margin-right: 10px;" #number>
+  </mat-form-field>
 </form>
-<h4>{{nEsPrimo ? 'Es primo': 'No es primo'}}</h4>
+<button mat-raised-button (click)="esPrimo(+number.value)">Calcular</button>
+<hr>
+<div>
+  <h3><mat-icon>{{nEsPrimo ? 'check': 'cancel'}}</mat-icon>{{nEsPrimo ? 'Es primo': 'No es primo'}}</h3>
+</div>
